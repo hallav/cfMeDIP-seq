@@ -9,6 +9,11 @@ This repository contains the scripts related to Halla-aho and Lähdesmäki (2021
 
 As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from different methods to the methods presented in Shen et al. (2018), we utilised the methods from [] to reproduce the results. The scripts from [] were utilised for data split generation, DMR finding, GLMNet model training and AUC calculation. For this purpose we used scripts from [], [] and []. 
 
+# Software and packages
+
+Lis of used software and packages
+- R version 3.6.1
+
 # References
 
 

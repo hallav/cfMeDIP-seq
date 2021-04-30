@@ -7,7 +7,7 @@ This repository contains the scripts related to Halla-aho and Lähdesmäki (2021
 - `AUC_calculation`: calculating AUC values for discovery and validation cohorts
 - `figures`: producing figures for Halla-aho and Lähdesmäki (2021) [1]
 
-As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from different methods to the methods presented in Shen et al. (2018) [2], we utilised the methods from [3] and [4] to reproduce the results. The script repositories [3] and [4] have Creative Commons Attribution 4.0 International lisence. The scripts from [3] and [4] were utilised for data split generation, DMR finding, GLMNet model training and AUC calculation. Some of the methods were modified to allow parallelisation and to add features. The original sources and modifications have been indicated in the each of the files in this repository, if applicable.
+As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from different methods to the methods presented in Shen et al. (2018) [2], we utilised the methods from [3] and [4] to reproduce the results. The script repositories [3] and [4] have [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) lisence. The scripts from [3] and [4] were utilised for data split generation, DMR finding, GLMNet model training and AUC calculation. Some of the methods were modified to allow parallelisation and to add features. The original sources and modifications have been indicated in the each of the files in this repository, if applicable.
 
 The Stan model for the logistic regression model with regularised horseshoe prior is from [5].
 

@@ -175,7 +175,7 @@ print("Calculate AUCs and PRAUCs")
 
 AUCs <- list()
 for(j in 1:length(CLASSLIST_V)){
-  AUCs[[j]] <-calculate_AUC_validation(iter_4classes[[j]],CLASSLIST_V[j])
+  AUCs[[j]] <-calculate_AUROC_validation(iter_4classes[[j]],CLASSLIST_V[j])
 }
 
 

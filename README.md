@@ -29,6 +29,7 @@ List of used software and packages
 - NMF 0.22.0
 - RColorBrewer 1.1.2
 - reshape2 1.4.3
+- rstan 2.19.3
 - stats 3.6.1
 - tidyr 1.0.2
 

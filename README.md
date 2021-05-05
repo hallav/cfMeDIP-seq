@@ -15,6 +15,22 @@ The Stan model for the logistic regression model with regularised horseshoe prio
 
 List of used software and packages
 - R 3.6.1
+- boot 1.3.22
+- broom 0.5.4
+- caret 6.0.85
+- cowplot 1.1.1
+- dimreduce 0.2.1
+- doParallel 1.0.15
+- dplyr 0.8.4
+- extrafont 0.17
+- glmnet 3.0.2
+- grid 3.6.1
+- limma 3.42.2
+- NMF 0.22.0
+- RColorBrewer 1.1.2
+- reshape2 1.4.3
+- stats 3.6.1
+- tidyr 1.0.2
 
 The scripts have been run in Linux environment.
 

@@ -110,7 +110,7 @@ for(J in 1:length(CLASSLIST)){
     X_val <- standardizecounts_validation(t(X_train),t(X_val),scaling=0.5)
     rm(X_train)
 
-    predictions <- predict_class_ourModel(ourModel.onevEach$Samples,X_val)
+    predictions <- predict_class_LR(ourModel.onevEach$Samples,X_val)
 
     all_preds[i,] <- predictions
 

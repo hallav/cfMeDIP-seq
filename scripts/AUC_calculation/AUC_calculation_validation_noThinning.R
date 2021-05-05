@@ -160,7 +160,7 @@ for(J in 1:length(CLASSLIST)){
 
     #Do predictions
     if(strtoi(args[9])==0){
-      predictions <-predict_class_RHS_validation(ourModel.onevEach$Samples,X_val)
+      predictions <-predict_class_LR_RHS_validation(ourModel.onevEach$Samples,X_val)
     }else{
       #predictions from saved GP result object
       predictions<- ourModel.onevEach$validationDataPredictions

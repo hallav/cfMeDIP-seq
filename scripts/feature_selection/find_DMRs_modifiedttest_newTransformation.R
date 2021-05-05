@@ -18,7 +18,7 @@ if (length(args)!=8) {
     stop("The number of input arguments is incorrect.", call.=FALSE)
 }
 
-source("modifiedClassifiers.R")
+source("featureSelection_methods.R")
 
 INPUT_FILE=args[3]
 DATASPLITS_FILE=args[4]
@@ -29,7 +29,7 @@ load(DATASPLITS_FILE)
 ID=strtoi(args[1])
 
 
-FeatureList_all <- OnevsEach_DMR_finding_noZeroCounts(wholeData_thinned, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], nDMR = strtoi(args[7]), newTransformation=strtoi(args[8])) 
+FeatureList_all <- DMR_finding_modifiedT_noZeroCounts(wholeData_thinned, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], nDMR = strtoi(args[7]), newTransformation=strtoi(args[8])) 
 
 FeatureList <- FeatureList_all$standard
 

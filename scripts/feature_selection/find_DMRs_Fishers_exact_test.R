@@ -17,7 +17,7 @@ if (length(args)!=6) {
     stop("The number of input arguments is incorrect.", call.=FALSE)
 }
 
-source("modifiedClassifiers.R")
+source("featureSelection_methods.R")
 
 
 INPUT_FILE=args[3]

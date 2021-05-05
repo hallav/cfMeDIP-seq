@@ -4,6 +4,7 @@
 #train_LR_RHS_model_PCA_features (OnevsEach used as basis for defining the training and test data)
 #train_LR_RHS_model (OnevsEach used as basis for defining the training and test data)
 
+library(rstan)
 library(boot) #needed for inverse-logit calculation
 library(dplyr)
 library(ggplot2)

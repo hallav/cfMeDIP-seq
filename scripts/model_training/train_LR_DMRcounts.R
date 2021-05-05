@@ -29,7 +29,7 @@ load(args[7]) #Data splits file
 ID=strtoi(args[1])
 CLASS=strtoi(args[6])
 
-ourModel.onevEach <- train_LR_DMRcount_model(wholeData_thinned, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], FeatureList_top, FeatureList_bottom, CLASS)
+ourModel.onevEach <- train_LR_DMRcount_model(wholeData_thinned, classInformation = dataSplits$df, TrainIndices = dataSplits$samples[[ID]], FeatureList_top, FeatureList_bottom, CLASS)
 
 save(ourModel.onevEach, file = paste(args[5], ID,"_CLASS", CLASS,".RData",sep=""),compress="xz")
 warnings()

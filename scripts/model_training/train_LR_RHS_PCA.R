@@ -42,7 +42,7 @@ wholeData_thinned <- log2(wholeData_thinned * 0.3 + 0.5)
 pairsplot <- 0 #By default the pairs plot is not plotted
 debugplots <- 0
 
-ourModel.onevEach <- train_LR_RHS_model_PCA_features(Mat = wholeData_thinned, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], index=CLASS, parameter_P0=strtoi(args[7]), pca_results=PCA_result_list[[CLASS]], N_components=strtoi(args[8]), pairsPlot=pairsplot, FigFolder=args[9], dataSplitID=ID, debug=debugplots, ISPCA=0, normalize_pca=1)
+ourModel.onevEach <- train_LR_RHS_model_PCA_features(DM = wholeData_thinned, classInformation = dataSplits$df, TrainIndices = dataSplits$samples[[ID]], index=CLASS, parameter_P0=strtoi(args[7]), pca_results=PCA_result_list[[CLASS]], N_components=strtoi(args[8]), pairsPlot=pairsplot, FigFolder=args[9], dataSplitID=ID, debug=debugplots, ISPCA=0, normalize_pca=1)
 
 save(ourModel.onevEach, file = paste(args[4], ID,"_CLASS", CLASS,".RData",sep=""),compress="xz")
 warnings()

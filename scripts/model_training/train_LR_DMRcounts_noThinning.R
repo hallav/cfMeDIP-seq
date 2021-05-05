@@ -40,7 +40,7 @@ ID=strtoi(args[1])
 CLASS=strtoi(args[6])
 
 
-ourModel.onevEach <- train_LR_DMRcount_model(DataMatrix, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], FeatureList_top, FeatureList_bottom, CLASS)
+ourModel.onevEach <- train_LR_DMRcount_model(DataMatrix, classInformation = dataSplits$df, TrainIndices = dataSplits$samples[[ID]], FeatureList_top, FeatureList_bottom, CLASS)
 
 save(ourModel.onevEach, file = paste(args[5], ID,"_CLASS", CLASS,".RData",sep=""),compress="xz")
 warnings()

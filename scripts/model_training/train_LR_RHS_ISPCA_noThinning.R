@@ -58,7 +58,7 @@ if(args[10]==1){
   PCA_OBJECT<-PCA_result_list[[1]] #If DMRs were not used, there is only one set of PCAs in the list object
 }
 
-ourModel.onevEach <- train_LR_RHS_model_PCA_features(Mat = DataMatrix, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], index=CLASS, parameter_P0=strtoi(args[7]), pca_results=PCA_OBJECT, N_components=strtoi(args[8]), pairsPlot=pairsplot, FigFolder=args[9], dataSplitID=ID,debug=0,ISPCA=1)
+ourModel.onevEach <- train_LR_RHS_model_PCA_features(DM = DataMatrix, classInformation = dataSplits$df, TrainIndices = dataSplits$samples[[ID]], index=CLASS, parameter_P0=strtoi(args[7]), pca_results=PCA_OBJECT, N_components=strtoi(args[8]), pairsPlot=pairsplot, FigFolder=args[9], dataSplitID=ID,debug=0,ISPCA=1)
 
 save(ourModel.onevEach, file = paste(args[4], ID,"_CLASS", CLASS,".RData",sep=""),compress="xz")
 warnings()

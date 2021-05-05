@@ -53,7 +53,7 @@ if(strtoi(args[8])==0){
 
 pairsplot <- 0 #By default the pairs plot is not plotted
 
-ourModel.onevEach <- train_LR_RHS_model(Mat = DM, classes.df = dataSplits$df, Indices = dataSplits$samples[[ID]], FeatureList=FeatureList, index=CLASS, parameter_P0=strtoi(args[7]),pairsPlot=pairsplot,dataSplitID=ID)
+ourModel.onevEach <- train_LR_RHS_model(Mat = DM, classInformation = dataSplits$df, TrainIndices = dataSplits$samples[[ID]], FeatureList=FeatureList, index=CLASS, parameter_P0=strtoi(args[7]),pairsPlot=pairsplot,dataSplitID=ID)
 
 save(ourModel.onevEach, file = paste(args[4], ID,"_CLASS", CLASS,".RData",sep=""),compress="xz")
 warnings()

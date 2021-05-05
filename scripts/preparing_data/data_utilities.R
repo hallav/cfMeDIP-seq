@@ -38,7 +38,7 @@ collectDataMatrix <- function(PATH,FOLDERS,CLASSES,WINDOWFILE,NSAMPLES){
   return(DM)
 }
 
-#The implementation of the sampling is from sampling.R by Emmi Rehn
+#The original implementation of the sampling was made by Emmi Rehn
 #thinData thins every sample separately, preserving PERCENTAGE proportion of the counts for a sample
 
 thinData <- function(DATA, PERCENTAGE){

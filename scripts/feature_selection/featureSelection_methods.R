@@ -41,8 +41,7 @@ PCA_allWindows <- function(Mat, Indices, transform=0){
 
 }
 
-#Function with this name was being used in a script, but it was not available in this file. Where did it disappear? This is a remake
-#of the function, but it is not certain that the original function was just like this. ADDED 5.3.2021
+#Perform PCA on the data, but use only DMR windows as input
 PCA_onlyDMRs <- function(Mat, Indices, FeatureList, class, transform=0){
 
   #The zero rows should be already removed from the input data. They should also be removed before doing predictions to the test data set.
@@ -71,12 +70,12 @@ PCA_onlyDMRs <- function(Mat, Indices, FeatureList, class, transform=0){
 
 }
 
-#Same as above, but PCA is done for the DMR sites only, not the whole set of 500k genomic windows
+#Perform ISPCA on the data. The features to be used as input can be specifies or all windows can be used
 ISPCA_allWindows <- function(Mat,classes.df, Indices, classLabels, FeatureList=NULL, class, transform=0, NC=NULL, NORMALIZE=FALSE, binarize=0){
   #FeatureList can be NULL if one does not want to specify which features to use for ISPCA (e.g. DMRs)
-  #If FeatureList is NULL (and binarize is 0), class can set to be anything, as it will not affect the ISPCA procedure  
+  #If FeatureList is NULL (and binarize is 0), class can set to be anything, as it will not be used
   #NORMALIZE: "Whether to scale the extracted features so that they all have standard deviation of one." from ISPCA help
-  #binarize: should the class information be binarized before ISPCA 
+  #binarize: should the clasit will not be used. The class which will have class label "1" should be defined with class. Labels of the other classes will be set to 0.
 
   TrainData <- Mat[,Indices]
   TrainPheno <- classes.df[Indices,]
@@ -108,7 +107,7 @@ ISPCA_allWindows <- function(Mat,classes.df, Indices, classLabels, FeatureList=N
 
 }
 
-#Took the DMR finding part from OnevsEach function (from OnevAllClassifier.R file from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International lisence) 
+#This is the DMR finding part from OnevsEach function (from OnevAllClassifier.R file from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International lisence) 
 #This function has been modified to
 #-discard DMRs for which the counts for all the samples is 0 (so there is no actual difference between the classes). This is done before picking DMRs based on the p-values.
 #-save top and bottom DMRs into their own files for DMR count model usage

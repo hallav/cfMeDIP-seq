@@ -73,9 +73,8 @@ normalizecounts_scale_DMRcounts <- function(datamatrix,datamatrix_picked,designm
     return(designmatrix*mean_total_counts)
 }
 
-#Function to standardize count data LOCATIONWISE (=covariatewise)
-#Method based on: https://en.wikipedia.org/wiki/Feature_scaling#Standardization_(Z-score_Normalization)
-#Returns data with mean 0 and sd 1 (locationwise)
+#Function to standardize count data genomic window -wise (=covariatewise)
+#Returns data with mean 0 and sd 1
 standardizecounts <- function(datamatrix, scaling=1) {
 
     #datamatrix = the input data to be normalized. The rows correspond to the genomic locations and columns to samples.
@@ -213,7 +212,7 @@ predict_class_LR_RHS_validation <- function(extracted_samples,design_matrix) {
 
 
 
-
+#Return a fata frame with alpha and beta means
 return_fitted_parameters <- function(extracted_samples) {
 
     
@@ -233,8 +232,7 @@ return_fitted_parameters_list <- function(extracted_samples) {
 }
 
 
-#Same as above but returns the fitted parameters as a list instead of a data frame
-#Function for regularised HS prior
+#Function for regularised HS prior, which uses different names for the variables
 return_fitted_parameters_list_RHS <- function(extracted_samples) {
 
 
@@ -246,7 +244,7 @@ return_fitted_parameters_list_RHS <- function(extracted_samples) {
 
 
 
-#Modified the OnevsEach function from OnevAllClassifier.R file (DOI: 10.5281/zenodo.1242697) to only contain the model training part, DMR finding is done separately
+#Modified the OnevsEach function from OnevAllClassifier.R file to only contain the model training part, DMR finding is done separately
 train_GLMNet_model <- function(Mat, classes.df, Indices, FeatureList) {
 
   TrainData <- Mat[,Indices]
@@ -288,7 +286,7 @@ train_GLMNet_model <- function(Mat, classes.df, Indices, FeatureList) {
 
 
 #Function for fitting logistic regression with hypo- and hypermethylated DMR counts as the two covariates in the model
-#NOTES: the data should be in non-transformed and non-scaled form when given as input. 
+#NOTE: the data should be in non-transformed and non-scaled form when given as input. 
 train_LR_DMRcount_model <- function(DM, classInformation, TrainIndices, FeatureList_top,FeatureList_bottom,index,testSetPrediction=1) {
 #DM: discovery cohort data object 
 #classInformation: sample phenotypes
@@ -402,7 +400,7 @@ train_LR_RHS_model_PCA_features <- function(DM, classInformation, TrainIndices, 
     library(dimreduce)
   }
 
-  #before running this function: remove zero-rows from DM (do the same before running PCA!)
+  #before running this function: remove zero-rows from DM
 
   TrainData <- DM[,TrainIndices]
   TrainPheno <- classInformation[TrainIndices,]

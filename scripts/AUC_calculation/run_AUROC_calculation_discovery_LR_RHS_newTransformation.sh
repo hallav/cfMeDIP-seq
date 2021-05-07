@@ -11,11 +11,11 @@ THINNING=6 #set to 4, 5 or 6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
-RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_newTransformation
-OUTPUTFOLDER=$RESULTFOLDER/AUCs/newDataSplits/sameReadcount10_"$THINNING"
+RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_newTransformation
+OUTPUTFOLDER=$RESULTFOLDER/AUCs/newDataSplits/totalReadcount10_"$THINNING"
 MODELFILENAME="LR_RHS"
 
 NAMEID="LR_RHS_newTransformation"

@@ -14,16 +14,16 @@ module load r/3.6.1-python3
 DATAFOLDER=...
 RESULTFOLDER=...
 THINNING=6 #set to 4, 5 or 6
-INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
-INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_sameReadcount10_"$THINNING".RData
+INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
+INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_totalReadcount10_"$THINNING".RData
 WHOLE_VALIDATION="$RESULTFOLDER"/validationData.RData
 
-FEATURELISTFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_
-PCAFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/newTransformation/PCA_with_DMRs/PCA_results_dataSplit_
+FEATURELISTFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_
+PCAFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/newTransformation/PCA_with_DMRs/PCA_results_dataSplit_
 
-RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_PCA_DMR_newTransformation
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"_validation
+RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_PCA_DMR_newTransformation
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"_validation
 MODELFILENAME="LR_RHS"
 
 NAMEID="LR_RHS_PCA"

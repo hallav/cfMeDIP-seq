@@ -8,11 +8,11 @@
 
 THINNING=4  #set to 4, 5 or 6
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
-RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/sameReadcount10_"$THINNING"_Fisher
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"
+RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/totalReadcount10_"$THINNING"_Fisher
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"
 
 NAMEID_glmnet="glmnet_Fisher"
 

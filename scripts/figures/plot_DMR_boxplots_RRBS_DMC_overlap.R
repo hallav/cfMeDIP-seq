@@ -60,9 +60,9 @@ for(METHOD in 1:3){
 
   index <- 1
   for(THINNING in c(4,5,6)){
-    DMRFOLDER_Fisher<-paste(DMRFOLDER,"/sameReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/Fisher",sep="")
-    DMRFOLDER_moderatedt_newT<-paste(DMRFOLDER,"sameReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/moderatedt_newTransformation",sep="")
-    DMRFOLDER_moderatedt<-paste(DMRFOLDER,"/sameReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/moderatedt",sep="")
+    DMRFOLDER_Fisher<-paste(DMRFOLDER,"/totalReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/Fisher",sep="")
+    DMRFOLDER_moderatedt_newT<-paste(DMRFOLDER,"totalReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/moderatedt_newTransformation",sep="")
+    DMRFOLDER_moderatedt<-paste(DMRFOLDER,"/totalReadcount10_",THINNING,"/DMRs_for_RRBS_comparison/moderatedt",sep="")
 
     number_of_DMRs_with_overlapping_RRBS_DMR_tissuevstissue <- rep(0,100)
     number_of_DMRs_with_overlapping_RRBS_DMR_tissuevsPBMC <- rep(0,100)

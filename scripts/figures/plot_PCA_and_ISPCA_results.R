@@ -78,20 +78,20 @@ RESULTFOLDER <-### Folder where the results from the different steps of the anal
 DATAFOLDER <-### Folder where the data has been stored
 
 #load data splits
-load(paste(RESULTFOLDER,"/datasplits/dataSplits_sameReadcount_10_",THINNING,".RData",sep=""))
+load(paste(RESULTFOLDER,"/datasplits/dataSplits_totalReadcount_10_",THINNING,".RData",sep=""))
 #load thinned data
-load(paste(DATAFOLDER,"/thinneddata/wholedata_thinned_allClasses_sameReadcount10_",THINNING,".RData",sep=""))
+load(paste(DATAFOLDER,"/thinneddata/wholedata_thinned_allClasses_totalReadcount10_",THINNING,".RData",sep=""))
 
 #load PCA object
-load(paste(RESULTFOLDER,"/DMRs/sameReadcount10_",THINNING,"/PCA_with_DMRs/PCA_results_dataSplit_",DATASPLIT,".RData",sep=""))
+load(paste(RESULTFOLDER,"/DMRs/totalReadcount10_",THINNING,"/PCA_with_DMRs/PCA_results_dataSplit_",DATASPLIT,".RData",sep=""))
 PCA_PCA_result_list <- PCA_result_list
 
 #load ISPCA object
-load(paste(RESULTFOLDER,"/DMRs/sameReadcount10_",THINNING,"/ISPCA/ISPCA_DMR_results_dataSplit_",DATASPLIT,".RData",sep=""))
+load(paste(RESULTFOLDER,"/DMRs/totalReadcount10_",THINNING,"/ISPCA/ISPCA_DMR_results_dataSplit_",DATASPLIT,".RData",sep=""))
 ISPCA_PCA_result_list <- PCA_result_list
 
 #load binary ISPCA object
-load(paste(RESULTFOLDER,"/DMRs/sameReadcount10_",THINNING,"/ISPCA_without_binarize/ISPCA_DMR_results_dataSplit_",DATASPLIT,".RData",sep=""))
+load(paste(RESULTFOLDER,"/DMRs/totalReadcount10_",THINNING,"/ISPCA_without_binarize/ISPCA_DMR_results_dataSplit_",DATASPLIT,".RData",sep=""))
 ISPCA_bin_PCA_result_list <- PCA_result_list
 
 

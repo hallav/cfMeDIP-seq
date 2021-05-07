@@ -16,16 +16,16 @@ THINNING=4  #set to 4, 5 or 6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
-INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_sameReadcount10_"$THINNING".RData
+INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
+INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_totalReadcount10_"$THINNING".RData
 WHOLE_VALIDATION="$RESULTFOLDER"/validationData.RData
 
-FEATURELISTFILE_TOP="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_top_
-FEATURELISTFILE_BOTTOM="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_bottom_
+FEATURELISTFILE_TOP="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_top_
+FEATURELISTFILE_BOTTOM="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_bottom_
 
-RESULTFOLDER_LR="$RESULTFOLDER"/LR_DMRcount/sameReadcount10_"$THINNING"
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/newDataSplits/sameReadcount10_"$THINNING"_validation
+RESULTFOLDER_LR="$RESULTFOLDER"/LR_DMRcount/totalReadcount10_"$THINNING"
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/newDataSplits/totalReadcount10_"$THINNING"_validation
 MODELFILENAME="DMRcounts_allClasses"
 
 NAMEID="LR_DMRcounts"

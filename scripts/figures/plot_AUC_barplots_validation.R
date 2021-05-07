@@ -17,8 +17,8 @@ index<-1
 
 for(THINNING in c(4,5,6)){
 
-FIGFOLDER=paste(".../sameReadcount10_",THINNING,"_validation",sep="") #Folder where to store the barplot figures
-INPUTFOLDER=paste(".../sameReadcount10_",THINNING,"_validation",sep="") #Folder where the AUC values have been stored
+FIGFOLDER=paste(".../totalReadcount10_",THINNING,"_validation",sep="") #Folder where to store the barplot figures
+INPUTFOLDER=paste(".../totalReadcount10_",THINNING,"_validation",sep="") #Folder where the AUC values have been stored
 
 #Load data
 

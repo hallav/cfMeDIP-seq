@@ -14,8 +14,8 @@ N_methods<-11
 index<-1
 for(THINNING in c(4,5,6)){
 
-OUTPUTFOLDER=paste(".../sameReadcount10_",THINNING,sep="")
-INPUTFOLDER=paste(".../sameReadcount10_",THINNING,sep="")
+OUTPUTFOLDER=paste(".../totalReadcount10_",THINNING,sep="")
+INPUTFOLDER=paste(".../totalReadcount10_",THINNING,sep="")
 
 #Load data
 

@@ -12,9 +12,9 @@ THINNING=6 #set to 4, 5 or 6
 RESULTFOLDER=...
 DATAFOLDER=...
 
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
-RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_ISPCA_normalized_binarize
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
+RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_ISPCA_normalized_binarize
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"
 MODELFILENAME="LR_RHS"
 NAMEID="LR_ISPCA_binary_normalized"
 

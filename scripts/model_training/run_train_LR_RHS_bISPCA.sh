@@ -14,13 +14,13 @@ if (($#==1)); then
     DATAFOLDER=...
     RESULTFOLDER=...
 
-    INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-    DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+    INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+    DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
     ID=$SLURM_ARRAY_TASK_ID
 
-    PCAFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/newTransformation/ISPCA_without_DMRs_normalized_binarize/ISPCA_DMR_results_dataSplit_"$ID".RData
-    OUTPUTFOLDER="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_ISPCA_normalized_binarize
+    PCAFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/newTransformation/ISPCA_without_DMRs_normalized_binarize/ISPCA_DMR_results_dataSplit_"$ID".RData
+    OUTPUTFOLDER="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_ISPCA_normalized_binarize
     PLOTFOLDER=$OUTPUTFOLDER 
 
     CLASS=$1

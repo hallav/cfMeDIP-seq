@@ -15,15 +15,15 @@ THINNING=4 #set to 4, 5 or 6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-INPUTFILE_validation="$DATAFOLDER"/validation_thinned_sameReadcount10_"$THINNING".RData
+INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+INPUTFILE_validation="$DATAFOLDER"/validation_thinned_totalReadcount10_"$THINNING".RData
 WHOLE_VALIDATION="$DATAFOLDER"/validationData.RData
 
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
-FEATURELISTFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
+FEATURELISTFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_
 
-RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/sameReadcount10_"$THINNING"_newTransformation
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"_validation
+RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/totalReadcount10_"$THINNING"_newTransformation
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"_validation
 MODELFILENAME="LR_RHS"
 
 NAMEID="glmnet_newTransformation" 

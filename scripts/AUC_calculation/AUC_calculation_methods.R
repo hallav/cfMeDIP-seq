@@ -8,7 +8,7 @@ library(caret)
 library(pROC)
 library(stats)
 
-#This function is from file MachineLearning_Final.html from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International
+#This function is from file MachineLearning_Final.html from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International lisence
 PredFunction <- function(ModelList, TestData, Indices, classes.df) { 
   
   TrainPheno <- classes.df[Indices,]

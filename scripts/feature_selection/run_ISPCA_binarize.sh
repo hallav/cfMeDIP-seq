@@ -16,15 +16,15 @@ NORMALIZE=1
 
 THINNING=4 #set to 4, 5 or 6
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
 ID=$SLURM_ARRAY_TASK_ID
 DMRFILE="NULL" #not used
 
 echo $ID
 
-OUTPUTFOLDER="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/newTransformation/ISPCA_without_DMRs_normalized_binarize
+OUTPUTFOLDER="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/newTransformation/ISPCA_without_DMRs_normalized_binarize
 
 OUTPUTFILE="$OUTPUTFOLDER"/ISPCA_DMR_results_dataSplit_"$ID".RData
 

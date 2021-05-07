@@ -15,7 +15,7 @@ ROC_list_of_lists <- list()
 iter<-1
 
 for(THINNING in c(4,5,6)){
-INPUTFOLDER<-paste(RESULTFOLDER,"/sameReadcount10_",THINNING,"_validation",sep="")
+INPUTFOLDER<-paste(RESULTFOLDER,"/totalReadcount10_",THINNING,"_validation",sep="")
 
 #Load saved results for all methods and save into list
 

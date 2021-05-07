@@ -15,7 +15,7 @@ library(cowplot)
 for(THINNING in c(4,5,6)){
 
 
-INPUTFOLDER=paste(".../sameReadcount10_",THINNING,"_validation",sep="")
+INPUTFOLDER=paste(".../totalReadcount10_",THINNING,"_validation",sep="")
 
 #Load data
 

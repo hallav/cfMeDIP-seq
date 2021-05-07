@@ -12,13 +12,13 @@ THINNING=6 #set to 4, 5 or 6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
 ID=$SLURM_ARRAY_TASK_ID
-DMRFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_"$ID".RData
+DMRFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_"$ID".RData
 
-OUTPUTFOLDER="$RESULTFOLDER"/GLMNET/sameReadcount10_"$THINNING"
+OUTPUTFOLDER="$RESULTFOLDER"/GLMNET/totalReadcount10_"$THINNING"
 
 TRANSFORMATION=0 #use the original data transformation
 

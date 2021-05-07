@@ -21,8 +21,8 @@ THINNING=6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-OUTPUTFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+OUTPUTFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 WHOLEDATAFILE="$DATAFOLDER"/wholeData.RData
 
 #set the seed to: 10^4 -> 4, 10^5 -> 5 10^6 -> 6

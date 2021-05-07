@@ -15,13 +15,13 @@ if (($#==1)); then
     DATAFOLDER=...
     RESULTFOLDER=...
 
-    INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-    DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+    INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+    DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
     ID=$SLURM_ARRAY_TASK_ID
 
-    DMRFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/Fishers_exact_test/found_DMRS_allClasses_"$ID".RData
-    OUTPUTFOLDER="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_Fisher
+    DMRFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/Fishers_exact_test/found_DMRS_allClasses_"$ID".RData
+    OUTPUTFOLDER="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_Fisher
 
     CLASS=$1
 

@@ -17,12 +17,12 @@ THINNING=6 #set to 4, 5 or 6
 DATAFOLDER=...
 RESULTFOLDER=...
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
 ID=$SLURM_ARRAY_TASK_ID
 
-OUTPUTFOLDER="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/Fishers_exact_test
+OUTPUTFOLDER="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/Fishers_exact_test
 
 OUTPUTFILE="$OUTPUTFOLDER"/found_DMRS_allClasses_"$ID".RData
 OUTPUTFILE_T="$OUTPUTFOLDER"/found_DMRS_allClasses_top_"$ID".RData

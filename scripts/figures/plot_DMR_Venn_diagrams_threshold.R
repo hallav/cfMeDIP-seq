@@ -19,9 +19,9 @@ for(THINNING in c(4,5,6)){
 M1<-"moderatedt"
 M2<-"moderatedt_newT"
 M3<-"Fisher"
-M1FOLDER<-paste(DMRFOLDER,"/sameReadcount10_",THINNING,sep="")
-M2FOLDER<-paste(DMRFOLDER,"/sameReadcount10_",THINNING,"/newTransformation",sep="")
-M3FOLDER<-paste(DMRFOLDER,"/sameReadcount10_",THINNING,"/Fishers_exact_test",sep="")
+M1FOLDER<-paste(DMRFOLDER,"/totalReadcount10_",THINNING,sep="")
+M2FOLDER<-paste(DMRFOLDER,"/totalReadcount10_",THINNING,"/newTransformation",sep="")
+M3FOLDER<-paste(DMRFOLDER,"/totalReadcount10_",THINNING,"/Fishers_exact_test",sep="")
 
 
 #List for storing the DMRs for each method

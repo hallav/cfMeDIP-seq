@@ -14,7 +14,7 @@ library(cowplot)
 
 for(THINNING in c(4,5,6)){
 
-INPUTFOLDER=paste(".../sameReadcount10_",THINNING,sep="") #Folder into which the AUC values have been stored
+INPUTFOLDER=paste(".../totalReadcount10_",THINNING,sep="") #Folder into which the AUC values have been stored
 
 #Load data
 

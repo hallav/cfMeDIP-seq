@@ -14,16 +14,16 @@ DATAFOLDER=...
 RESULTFOLDER=...
 THINNING=6 #set to 4, 5 or 6
  
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 
 WHOLE_VALIDATION="$DATAFOLDER"/validationData.RData
 
-FEATURELISTFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/found_DMRS_allClasses_
-PCAFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/ISPCA_without_DMRs_normalized_binarize/ISPCA_DMR_results_dataSplit_
+FEATURELISTFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/found_DMRS_allClasses_
+PCAFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/ISPCA_without_DMRs_normalized_binarize/ISPCA_DMR_results_dataSplit_
 
-RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/sameReadcount10_"$THINNING"_ISPCA_normalized_binarize
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"_validation
+RESULTFOLDER_LR="$RESULTFOLDER"/LR_RHS/totalReadcount10_"$THINNING"_ISPCA_normalized_binarize
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"_validation
 MODELFILENAME="LR_RHS"
 
 NAMEID="LR_ISPCA_binary"

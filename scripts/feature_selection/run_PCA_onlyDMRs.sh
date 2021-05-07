@@ -18,14 +18,14 @@ RESULTFOLDER=...
 
 THINNING=6 #set to 4, 5 or 6
 
-INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
+INPUTFILE="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
 ID=$SLURM_ARRAY_TASK_ID
-DMRFILE="$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/newTransformation/found_DMRS_allClasses_"$ID".RData"
+DMRFILE="$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/newTransformation/found_DMRS_allClasses_"$ID".RData"
 
 echo $ID
 
-OUTPUTFOLDER=$RESULTFOLDER"/DMRs/sameReadcount10_"$THINNING"/newTransformation/PCA_with_DMRs
+OUTPUTFOLDER=$RESULTFOLDER"/DMRs/totalReadcount10_"$THINNING"/newTransformation/PCA_with_DMRs
 
 OUTPUTFILE="$OUTPUTFOLDER"/PCA_results_dataSplit_"$ID".RData
 srun Rscript --no-save PCA_onlyDMRs.R $ID $OUTPUTFILE $INPUTFILE $DATASPLITFILE $DMRFILE

@@ -13,13 +13,13 @@ module load r/3.6.1-python3
 
 THINNING=6 #set to 4, 5 or 6
 
-INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_sameReadcount10_"$THINNING".RData
-DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_sameReadcount_10_"$THINNING".RData
-INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_sameReadcount10_"$THINNING".RData
+INPUTFILE_training="$DATAFOLDER"/wholedata_thinned_allClasses_totalReadcount10_"$THINNING".RData
+DATASPLITFILE="$RESULTFOLDER"/datasplits/dataSplits_totalReadcount_10_"$THINNING".RData
+INPUTFILE_validation="$RESULTFOLDER"/validation_thinned_totalReadcount10_"$THINNING".RData
 WHOLE_VALIDATION="$RESULTFOLDER"/validationData.RData
 
-RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/sameReadcount10_"$THINNING"_Fisher
-OUTPUTFOLDER="$RESULTFOLDER"/AUCs/sameReadcount10_"$THINNING"_validation
+RESULTFOLDER_glmnet="$RESULTFOLDER"/GLMNET/totalReadcount10_"$THINNING"_Fisher
+OUTPUTFOLDER="$RESULTFOLDER"/AUCs/totalReadcount10_"$THINNING"_validation
 
 NAMEID="glmnet_Fisher"
 GP=0

@@ -10,7 +10,7 @@ sample3_counts <- sample(0:50, N_rows, replace = TRUE)
 sample4_counts <- sample(0:50, N_rows, replace = TRUE)
 sample5_counts <- sample(0:50, N_rows, replace = TRUE)
 
-OUTPUTFOLDER <- "/Users/viivihalla-aho/Documents/cfDNA/dummy_files"
+OUTPUTFOLDER <- "..." #The directory where to store thw files must be defined before running this script
 #Save into files
 cat(sample1_counts, file = paste(OUTPUTFOLDER,"/dummy_counts_sample1.txt",sep=""),sep="\n")
 cat(sample2_counts, file = paste(OUTPUTFOLDER,"/dummy_counts_sample2.txt",sep=""),sep="\n")

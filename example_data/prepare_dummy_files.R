@@ -21,6 +21,7 @@ cat(sample5_counts, file = paste(OUTPUTFOLDER,"/dummy_counts_sample5.txt",sep=""
 #Prepare dummy genomic window (i.e. count file row) names object
 dummy_window_names <-data.frame(WindowsCoords = rep("", N_rows))
 
+#Here we use dummy coordinates instead of actual ones. The actual coordinates should contain genomic window coordinates (chromosome, start and end site) in string format
 for(i in 1:N_rows){
   dummy_window_names$WindowsCoords[i] <- paste("window_coords_",i,sep="")
 }

@@ -11,6 +11,14 @@ As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from diff
 
 The Stan model for the logistic regression model with regularised horseshoe prior is from [5].
 
+## Example data
+
+The folder `example_data` contains files that demonstrate the file formats of the data.
+- `dummy_counts_sample*.txt`: files containing random generated read counts, there are five dummy samples in total
+- `dummy_genomic_window_coords.RData`: file containing the row names for the files `dummy_counts_sample*.txt`
+- `dummy_dataMatrix.RData`: a data matrix with the read counts for all the five dummy samples
+- `prepare_dummy_files.R`: R script for preparing the files above
+
 # Software and packages
 
 List of used software and packages

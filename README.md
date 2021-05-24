@@ -47,10 +47,10 @@ The scripts have been run in Linux environment.
 
 [1] Halla-aho and Lähdesmäki (2021). Probabilistic modeling methods for cell-free DNA methylation based cancer classification. BioRxiv link to be added
 
-[2] Shen et al. (2018). Sensitive tumour detection and classification using plasma cell-free DNA methylomes. Nature, 563(7732), 579-583.
+[2] Shen et al. (2018). Sensitive tumour detection and classification using plasma cell-free DNA methylomes. Nature, 563(7732), 579-583. https://doi.org/10.1038/s41586-018-0703-0 
 
 [3] Ankur Chakravarthy (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697
 
 [4] Ankur Chakravarthy (2018). Intermediate data objects from running the machine learning code for Shen et al, Nature, 2018 [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1490920
 
-[5] Piironen and Vehtari (2017). Sparsity information and regularization in the horseshoe and other shrinkage priors. Electronic Journal of Statistics, 11(2), 5018-5051.
+[5] Piironen and Vehtari (2017). Sparsity information and regularization in the horseshoe and other shrinkage priors. Electronic Journal of Statistics, 11(2), 5018-5051. https://doi.org/10.1214/17-EJS1337SI

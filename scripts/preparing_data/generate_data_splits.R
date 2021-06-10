@@ -6,6 +6,8 @@ args <- commandArgs(TRUE)
 #3: seed number
 #4: non-thinned whole data file name and path
 
+#OnevAllClassifiers.R file from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697
+
 source("OnevAllClassifiers.R")
 set.seed(strtoi(args[3]))
 

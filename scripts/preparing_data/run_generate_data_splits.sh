@@ -6,12 +6,6 @@
 #SBATCH --mail-user=viivi.halla-aho@aalto.fi
 
 
-#Updated the Perl and sqlite modules for R3.6.1
-module load Perl/5.28.0-GCCcore-7.3.0
-module load sqlite/3.28.0
-module load r/3.6.1-python3
-
-
 #1: thinned whole data file name and path
 #2: output file name and path
 #3: seed number

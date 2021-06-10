@@ -1,4 +1,4 @@
-#The function OnevsEach from OnevAllClassifiers.R file from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International lisence has been used as a bases for the following functions:
+#The function OnevsEach from OnevAllClassifiers.R file from Ankur Chakravarthy. (2018). Machine Learning Models for cfMeDIP data from Shen et al. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1242697 Lisence: Creative Commons Attribution 4.0 International lisence has been used as a basis for the following functions:
 #train_GLMNet_model (modified version of OnevsEach function)
 #train_LR_DMRcount_model (OnevsEach used as basis for defining the training and test data)
 #train_LR_RHS_model_PCA_features (OnevsEach used as basis for defining the training and test data)

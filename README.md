@@ -45,7 +45,7 @@ The scripts have been run in Linux environment.
 
 # References
 
-[1] Halla-aho and Lähdesmäki (2021). Probabilistic modeling methods for cell-free DNA methylation based cancer classification. BioRxiv link to be added
+[1] Halla-aho and Lähdesmäki (2021). Probabilistic modeling methods for cell-free DNA methylation based cancer classification. https://doi.org/10.1101/2021.06.18.444402
 
 [2] Shen et al. (2018). Sensitive tumour detection and classification using plasma cell-free DNA methylomes. Nature, 563(7732), 579-583. https://doi.org/10.1038/s41586-018-0703-0 
 

@@ -207,7 +207,7 @@ if(strtoi(args[7])==1){
     AUPRC.75q.LR_RHS[i] <- quantile(PRAUC_Bound$AUC[PRAUC_Bound$ID==CLASSLIST_V[i]],0.75)
 
 
-    AUC.IDs[i] <- CLASSLIST[i]
+    AUC.IDs[i] <- CLASSLIST_V[i]
   }
 
 
@@ -218,7 +218,7 @@ if(strtoi(args[7])==1){
     AUPRC_25q=AUPRC.25q.LR_RHS,
     AUC_75q=AUC.75q.LR_RHS,
     AUPRC_75q=AUPRC.75q.LR_RHS,
-    classname=CLASSLIST)
+    classname=CLASSLIST_V)
 
   save(AUC.median.df, file = args[8],compress="xz")
 

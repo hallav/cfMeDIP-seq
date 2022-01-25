@@ -177,20 +177,14 @@ print("Save AUC and PRAUC values into a file")
 N_classes <- length(CLASSLIST_V)
 if(strtoi(args[7])==1){
 
-  AUC.medians.GLMNET <- rep(0,N_classes)
   AUC.medians.LR_RHS <- rep(0,N_classes)
   AUC.IDs <- rep(0,N_classes)
-  AUPRC.medians.GLMNET <- rep(0,N_classes)
   AUPRC.medians.LR_RHS <- rep(0,N_classes)
 
-  AUC.25q.GLMNET <- rep(0,N_classes)
   AUC.25q.LR_RHS <- rep(0,N_classes)
-  AUPRC.25q.GLMNET <- rep(0,N_classes)
   AUPRC.25q.LR_RHS <- rep(0,N_classes)
 
-  AUC.75q.GLMNET <- rep(0,N_classes)
   AUC.75q.LR_RHS <- rep(0,N_classes)
-  AUPRC.75q.GLMNET <- rep(0,N_classes)
   AUPRC.75q.LR_RHS <- rep(0,N_classes)
 
   for(i in 1:length(CLASSLIST_V)){
@@ -207,19 +201,19 @@ if(strtoi(args[7])==1){
     AUPRC.75q.LR_RHS[i] <- quantile(PRAUC_Bound$AUC[PRAUC_Bound$ID==CLASSLIST_V[i]],0.75)
 
 
-    AUC.IDs[i] <- CLASSLIST[i]
+    AUC.IDs[i] <- CLASSLIST_V[i]
   }
 
 
   AUC.median.df <- data.frame(
-    AUC_median=c(AUC.medians.LR_RHS,AUC.medians.GLMNET),
-    AUPRC_median=c(AUPRC.medians.LR_RHS,AUPRC.medians.GLMNET),
-    AUC_25q=c(AUC.25q.LR_RHS,AUC.25q.GLMNET),
-    AUPRC_25q=c(AUPRC.25q.LR_RHS,AUPRC.25q.GLMNET),
-    AUC_75q=c(AUC.75q.LR_RHS,AUC.75q.GLMNET),
-    AUPRC_75q=c(AUPRC.75q.LR_RHS,AUPRC.75q.GLMNET),
-    method=rep(c("ourMethod","glmnet"),each=length(CLASSLIST_V)),
-    classname=rep(CLASSLIST,2))
+    AUC_median=c(AUC.medians.LR_RHS),
+    AUPRC_median=c(AUPRC.medians.LR_RHS),
+    AUC_25q=c(AUC.25q.LR_RHS),
+    AUPRC_25q=c(AUPRC.25q.LR_RHS),
+    AUC_75q=c(AUC.75q.LR_RHS),
+    AUPRC_75q=c(AUPRC.75q.LR_RHS),
+    method=rep(c("ourMethod"),each=length(CLASSLIST_V)),
+    classname=CLASSLIST_V)
 
   save(AUC.median.df, file = args[8],compress="xz")
 

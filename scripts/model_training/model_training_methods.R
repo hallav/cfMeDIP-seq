@@ -287,7 +287,7 @@ train_GLMNet_model <- function(Mat, classes.df, Indices, FeatureList) {
 
 #Function for fitting logistic regression with hypo- and hypermethylated DMR counts as the two covariates in the model
 #NOTE: the data should be in non-transformed and non-scaled form when given as input. 
-train_LR_DMRcount_model <- function(DM, classInformation, TrainIndices, FeatureList_top,FeatureList_bottom,index,testSetPrediction=1) {
+train_LR_DMRcount_model <- function(DM, classInformation, TrainIndices, FeatureList_top,FeatureList_bottom,index,testSetPrediction=1,normalizeTotalReadscounts=1) {
 #DM: discovery cohort data object 
 #classInformation: sample phenotypes
 #TrainIndices: training set indices
@@ -295,7 +295,7 @@ train_LR_DMRcount_model <- function(DM, classInformation, TrainIndices, FeatureL
 #FeatureList_bottom: list of DMRs
 #index: class for which the classifier is trained (one vs. other classes)
 #testSetPrediction: make predictions for the test set
-
+#normalizeTotalReadscounts: normalize the data with respect to total read counts before model training
 
   TrainData <- DM[,TrainIndices]
   TrainPheno <- classInformation[TrainIndices,]
@@ -329,8 +329,9 @@ train_LR_DMRcount_model <- function(DM, classInformation, TrainIndices, FeatureL
   X <- cbind(X_top,X_bottom)
 
   #Normalization and standardization
-
-  X <- normalizecounts_scale_DMRcounts(DM,TrainData,X)
+  if(normalizeTotalReadscounts==1){
+    X <- normalizecounts_scale_DMRcounts(DM,TrainData,X)
+  }
   X <- t(standardizecounts(t(X),scaling=0.5))
 
   SCALE_ICEPT<-10

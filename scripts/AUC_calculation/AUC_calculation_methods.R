@@ -149,3 +149,101 @@ calculate_AUPRC_validation <- function(modelPredictions, CLASSNAME) {
   return(auc_DF)
 
 }
+
+
+#Adapted function calculate_AUPRC_discovery for intracranial tumors data set
+GetAUPRC.ClassWise.braindata <- function(Runs) {
+  library(PRROC) 
+  
+  BM <- lapply(Runs, function(x) x$BrainMets)
+  BM.predictions <- lapply(BM, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "BrainMets","One","Others")))
+  BM.auc <- lapply(BM.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+ 
+  HPC <- lapply(Runs, function(x) x$Hemangiopericytoma)
+  HPC.predictions <- lapply(HPC, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "Hemangiopericytoma","One","Others")))
+  HPC.auc <- lapply(HPC.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+
+  MG <- lapply(Runs, function(x) x$Meningioma)
+  MG.predictions <- lapply(MG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "Meningioma","One","Others")))
+  MG.auc <- lapply(MG.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+
+  NE <- lapply(Runs, function(x) x$NE)
+  NE.predictions <- lapply(NE, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "NE","One","Others")))
+  NE.auc <- lapply(NE.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+
+  WTG <- lapply(Runs, function(x) x$WT.Glioma)
+  WTG.predictions <- lapply(WTG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "WT.Glioma","One","Others")))
+  WTG.auc <- lapply(WTG.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+
+  MUTG <- lapply(Runs, function(x) x$MUT.Glioma)
+  MUTG.predictions <- lapply(MUTG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "MUT.Glioma","One","Others")))
+  MUTG.auc <- lapply(MUTG.predictions, function(x) with(x,pr.curve(scores.class0 = x$One[x$Class2=="One"], scores.class1 = x$One[x$Class2=="Others"], curve = T)$auc.integral))
+
+  BM.auc <- data.frame(AUC = unlist(BM.auc))%>%
+    mutate(ID = "BrainMets")
+  HPC.auc <- data.frame(AUC = unlist(HPC.auc))%>%
+    mutate(ID = "Hemangiopericytoma")
+  MG.auc <- data.frame(AUC = unlist(MG.auc))%>%
+    mutate(ID = "Meningioma")
+  NE.auc <- data.frame(AUC = unlist(NE.auc))%>%
+    mutate(ID = "NE")
+  WTG.auc <- data.frame(AUC = unlist(WTG.auc))%>%
+    mutate(ID = "WT.Glioma")  MUTG.auc <- data.frame(AUC = unlist(MUTG.auc))%>%
+    mutate(ID = "MUT.Glioma")
+  
+
+  Bound <- rbind(BM.auc,HPC.auc,MG.auc,NE.auc,WTG.auc,MUTG.auc)
+
+ 
+  return(Bound)
+ 
+}
+#Adapted AUC calculation function for intracranial tumors data set
+GetAUC.ClassWise.braindata <- function(Runs) {
+  
+  
+  BM <- lapply(Runs, function(x) x$BrainMets)
+  BM.predictions <- lapply(BM, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "BrainMets","One","Others")))
+  BM.auc <- lapply(BM.predictions, function(x) with(x,roc(Class2 ~ One)$auc))
+ 
+  HPC <- lapply(Runs, function(x) x$Hemangiopericytoma)
+  HPC.predictions <- lapply(HPC, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "Hemangiopericytoma","One","Others")))
+  HPC.auc <- lapply(HPC.predictions, function(x) with(x,roc(Class2 ~ One)$auc))
+
+  MG <- lapply(Runs, function(x) x$Meningioma)
+  MG.predictions <- lapply(MG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "Meningioma","One","Others")))
+  MG.auc <- lapply(MG.predictions, function(x) with(x,roc(Class2 ~ One)$auc))
+
+  NE <- lapply(Runs, function(x) x$NE)
+  NE.predictions <- lapply(NE, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "NE","One","Others")))
+  NE.auc <- lapply(NE.predictions, function(x) with(x,roc(Class2 ~ One)$auc))
+
+  WTG <- lapply(Runs, function(x) x$WT.Glioma)
+  WTG.predictions <- lapply(WTG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "WT.Glioma","One","Others")))
+  WTG.auc <- lapply(WTG.predictions, function(x) with(x,roc(Class2 ~ One)$auc))
+
+  MUTG <- lapply(Runs, function(x) x$MUT.Glioma)
+  MUTG.predictions <- lapply(MUTG, function(x) x%>%mutate(Class2 = ifelse(ActualClass == "MUT.Glioma","One","Others")))
+  MUTG.auc <- lapply(MUTG.predictions, function(x) with(x,roc(Class2 ~ One)$auc))  
+
+  BM.auc <- data.frame(AUC = unlist(BM.auc))%>%
+    mutate(ID = "BrainMets")
+  HPC.auc <- data.frame(AUC = unlist(HPC.auc))%>%
+    mutate(ID = "Hemangiopericytoma")
+  MG.auc <- data.frame(AUC = unlist(MG.auc))%>%
+    mutate(ID = "Meningioma")
+  NE.auc <- data.frame(AUC = unlist(NE.auc))%>%
+    mutate(ID = "NE")
+  WTG.auc <- data.frame(AUC = unlist(WTG.auc))%>%
+    mutate(ID = "WT.Glioma")
+  MUTG.auc <- data.frame(AUC = unlist(MUTG.auc))%>%
+    mutate(ID = "MUT.Glioma")
+  
+
+  Bound <- rbind(BM.auc,HPC.auc,MG.auc,NE.auc,WTG.auc,MUTG.auc)
+
+ 
+  return(Bound)
+ 
+}
+

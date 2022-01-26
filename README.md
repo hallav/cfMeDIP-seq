@@ -6,8 +6,9 @@ This repository contains the scripts related to Halla-aho and Lähdesmäki (2021
 - `model_training`: training the different models (GLMNet, logistic regression)
 - `AUC_calculation`: calculating AUC values for discovery and validation cohorts
 - `figures`: producing figures for Halla-aho and Lähdesmäki (2021) [1]
+- `intracranial_tumors`: producing results for the intracranial tumors data set from [6,7].
 
-As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from different methods to the methods presented in Shen et al. (2018) [2], we utilised the methods from repositories [3] and [4] to produce results with the same methods as in [2]. The script repositories [3] and [4] have [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) lisence. The scripts from [3] and [4] were utilised for data split generation, DMR finding, GLMnet model training and AUC calculation. Some of the methods were modified to allow parallelisation and to add features and the modified methods can be found from this repository. The original sources and modifications have been indicated in each of the files in this repository, if applicable.
+As the aim of Halla-aho and Lähdesmäki (2021) was to compare results from different methods to the methods presented in Shen et al. (2018) [2], we utilised the methods from repositories [3] and [4] to produce results with the same methods as in [2]. The script repositories [3] and [4] have [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) lisence. The scripts from [3] and [4] were utilised for data split generation, DMR finding, GLMnet model training and AUC calculation. Some of the methods were modified to allow parallelisation and to add features and the modified methods can be found from this repository. The original sources and modifications have been indicated in each of the files in this repository, if applicable. The R code files in `intracranial_tumors` depend on methods defined in the other folders.
 
 The Stan model for the logistic regression model with regularised horseshoe prior is from [5].
 
@@ -54,3 +55,7 @@ The scripts have been run in Linux environment.
 [4] Ankur Chakravarthy (2018). Intermediate data objects from running the machine learning code for Shen et al, Nature, 2018 [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1490920
 
 [5] Piironen and Vehtari (2017). Sparsity information and regularization in the horseshoe and other shrinkage priors. Electronic Journal of Statistics, 11(2), 5018-5051. https://doi.org/10.1214/17-EJS1337SI
+
+[6] Nassiri, F., Chakravarthy, A., Feng, S. et al. Detection and discrimination of intracranial tumors using plasma cell-free DNA methylomes. Nat Med 26, 1044–1047 (2020). https://doi.org/10.1038/s41591-020-0932-2
+
+[7] Ankur Chakravarthy. (2020). Reproducibility archive for MeDIP analyses of plasma DNA from brain tumour patients. (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3715312
